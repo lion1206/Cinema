@@ -8,8 +8,10 @@
   <!-- Шрифт -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  
 </head>
 <body>
+  
   <header>
     <div class="burger">
       <span></span><span></span><span></span>
@@ -27,21 +29,47 @@
   <div class="left-line"></div>
 
   <main class="hero">
-    <h1 class="title">Бэтмен</h1>
+    
+    <div class="hero-content">
+        <h1 class="title">Бэтмен</h1>
 
-    <p class="rating">Кинопоиск&nbsp;7,5/10</p>
+        <p class="rating">Кинопоиск&nbsp;7,5/10</p>
 
-    <div class="meta">
-      <span>USA</span>
-      <span class="dot" aria-hidden="true"></span>
-      <span>2025</span>
+        <div class="meta">
+            <span>USA</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>2025</span>
+        </div>
+
+        <p class="desc">
+            Бэтмен поднимает ставки в войне с криминалом. С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы Готэма от преступности. Сотрудничество оказывается эффективным, но скоро они обнаружат себя посреди хаоса, развязанного восходящим криминальным гением, известным напуганным горожанам под именем Джокер.
+        </p>
+            
+        <button class="btn-glow" type="button">Билеты</button>
     </div>
-
-    <p class="desc">
-      В детстве юный наследник огромного состояния оказался свидетелем убийства своих родителей, и тогда он решил бороться с преступностью.
-    </p>
-
-    <button class="btn-glow" type="button">Билеты</button>
+    <div class="hero-art">
+        <img class="hero-photo" src="photo/batman.png" alt="">
+    </div>
+    
+        
+    </div>
+    <div class="thumbs">
+        <img class="thumb" src="photo/fot1.png" alt="фото1">
+        <img class="thumb" src="photo/fot2.png" alt="фото2">
+    </div>
   </main>
+  <div class="cpicok">
+    <div class="now" id="now"> 
+        <button type="button" class="bt-dat" data-filter="today">Сегодня</button>
+        <button type="button" class="bt-dat" data-filter="tomorrow">Завтра</button>
+        <button type="button" class="bt-dat" data-filter="2025-09-08">8 сентября</button>
+        <button type="button" class="bt-dat" data-filter="2025-09-09">9 сентября</button>
+        <button type="button" class="bt-dat" data-filter="2025-09-08">10 сентября</button>
+    </div>
+  </div>
+  <div class="now2" id="gallery"> 
+        
+    </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
