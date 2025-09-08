@@ -1,0 +1,96 @@
+body{
+    background: black;
+    color: white;
+    
+}
+header{
+  position: fixed;     /* вместо relative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background:#222121;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:0 16px;
+  z-index:1000;        /* чтобы был поверх всего */
+}
+
+header *{ margin:0; padding:0; }
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.burger{
+  width:35px; height:20px;
+  display:flex; flex-direction:column;
+  justify-content:space-between;
+  cursor:pointer;
+  margin-right:auto;
+}
+.burger span{ width:100%; height:4px; background:#fff; border-radius:2px; }
+
+.cinema{
+  position:absolute; left:50%; top:50%;
+  transform:translate(-50%, -50%);
+  display:flex; gap:6px; white-space:nowrap; line-height:1;
+}
+.ms{ color:#fff; font-size:48px; font-weight:700; }
+.cn{ color:#FF0000;  font-size:48px; font-weight:700; }
+
+.btn{
+  margin-left:auto; margin-right:8px;
+  padding:15px 54px;
+  color:#fff; background:#000; border:none; border-radius:20px;
+  cursor:pointer; white-space:nowrap; flex:0 0 auto; max-width:40vw;
+}
+.cont_film{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 29px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.post_film img {
+  width: 300px;           /* задаём ширину фото */
+  height: auto;           /* чтобы сохранялись пропорции */
+  border-radius: 10px;    /* скруглим углы (для красоты, по желанию) */
+}
+
+.info_film {
+  flex: 1;                /* текст займёт всё оставшееся место */
+  font-size: 18px;        /* размер текста */
+  color: #fff;            /* например, белый */
+}
+h1{
+    color: red;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 05px 10px 40px rgba(255, 0, 0, 0.9);
+    margin-top: 100px;
+    
+}
+.btn-glow{
+  position:relative; 
+  border:none;
+  border-radius:20px;
+  padding:12px 32px;
+  font-size:20px;
+  font-weight:500;
+  color:#fff; background:#FF0000; cursor:pointer; outline:none;
+  transition:transform .15s ease;
+
+  display: block;          /* превращаем кнопку в блочный элемент */
+  width: max-content;      /* чтобы не растягивалась на всю ширину */
+  margin-left: 70px;
+  margin-top: 50px;
+}
+.btn-glow::before{
+  content:""; position:absolute; inset:0; border-radius:20px;
+  background:#FF0000; filter:blur(35px); z-index:-1; transform:translateY(10px);
+}
+.btn-glow:hover{ transform:translateY(-1px); }
+.btn-glow:active{ transform:translateY(0); }
