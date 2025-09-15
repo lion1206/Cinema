@@ -20,6 +20,36 @@
     <button class="btn" > <a href="vxod.html">ВХОД</a></button>
   </header>
     <main id="film"></main>
+    <!-- МОДАЛКА выбора мест -->
+    <div id="seatModal" class="modal" aria-hidden="true">
+    <!-- тёмная подложка -->
+    <div class="modal-backdrop"></div>
+
+    <!-- само окно -->
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="seatTitle">
+        <button class="modal-close" aria-label="Закрыть">×</button>
+
+        <h2 id="seatTitle" class="modal-title">Выберите места</h2>
+
+        <!-- экран -->
+        <div class="screen"></div>
+
+        <!-- сетка кресел -->
+        <div id="seat-hall" class="hall" aria-label="Схема зала"></div>
+        <!-- подписи 1..15 -->
+        <div id="seat-rowLabels" class="row-labels" aria-hidden="true"></div>
+
+        <!-- итог и оплата -->
+        <div class="summary">
+        <div class="total-line">
+            <span id="selectedCount">0</span> мест × <span id="price">440</span> ₽ = 
+            <strong id="total">0 ₽</strong>
+        </div>
+        <button id="payBtn" class="btn-buy" disabled>Оплатить</button>
+        </div>
+    </div>
+    </div>
+
 
     <script src="details.js"></script>
     <script src="script.js" defer></script>
